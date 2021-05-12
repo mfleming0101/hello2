@@ -1,0 +1,47 @@
+Setting up Python project directory in VS Code
+
+(1) Create project directory using cmd
+    * mkdir hello && cd hello
+(2) Create virtual environment named `.venv`
+    * python -m venv .venv
+(3) Open project directory in VS Code
+    * code .
+
+PAUSE: The virtual environment is not necessarily activated. So, Python package installs might be applied globally.
+
+(4) Activate the virtual environment using bash terminal
+    * source .venv/Scripts/activate
+
+(5) Create New Python Terminal
+    * CTRL+SHIFT+P to open Command Palette -> Python: Create Terminal
+    * If interpreter in `.venv` is not showing in the pre-populated list, 
+      then manually select it by navigating to `.venv\Scripts\python.exe`
+
+PAUSE: Add source control?
+
+(1) Create remote repository on github.com
+    * https://docs.github.com/en/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line
+
+(2) Initialize source control in local directory 
+    * git init -b main
+
+(3) Ignore virtual environment (append with `>>`; replace with `>`)
+    * echo '.venv' >> .gitignore
+
+(4) Create requirements.txt
+    * pip freeze > requirements.txt
+
+(5) Add readme (append with `>>`; replace with `>`)
+    * echo '# Add README text here' >> README.md
+
+(6) Track all files
+    * git add .
+
+(7) Make initial commit
+    * git commit -m "Initialize project directory"
+
+(8) Add to github remote (`origin` name can be replaced)
+    * git remote add origin <url>
+
+(9) Push `main` branch to remote repository `origin`
+   * git push origin main
