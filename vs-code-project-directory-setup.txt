@@ -13,7 +13,7 @@ PAUSE: The virtual environment is not necessarily activated. So, Python package 
     * source .venv/Scripts/activate
 
 (5) Create New Python Terminal
-    * CTRL+SHIFT+P to open Command Palette -> Python: Create Terminal
+    * CTRL+SHIFT+P to open Command Palette -> Python: Select Interpreter
     * If interpreter in `.venv` is not showing in the pre-populated list, 
       then manually select it by navigating to `.venv\Scripts\python.exe`
 
